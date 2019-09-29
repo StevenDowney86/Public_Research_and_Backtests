@@ -116,11 +116,10 @@ betas = pd.DataFrame()
 betas['coeff'] = regr.coef_
 betas['perf'] = returns.transpose()
 betas['return contribution'] = betas['coeff']*betas['perf']
-alpha = regr.intercept_
 fund_returns = annualized_returns.iloc[-1,-1]
 fund_returns_exess = fund_returns - annualized_returns.iloc[-1,-3]
 fund_returns_exess
-betas
+alpha = fund_returns_exess - betas['return contribution'].sum()
 
 betas.rename({0: 'Mkt-RF', 1: 'SMB', 2: 'HML', 3: 'Mom'})
 totals = pd.DataFrame()
