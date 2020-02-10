@@ -22,7 +22,6 @@ from scipy.optimize import minimize
 import datetime 
 from pandas_datareader.famafrench import get_available_datasets
 import pandas_datareader.data as web
-import pandas as pd
 
 pd.set_option('display.max_columns', 50)
 
