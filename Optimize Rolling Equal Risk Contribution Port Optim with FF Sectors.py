@@ -13,9 +13,9 @@ The first section is gathering the data and looping through lookback periods
 
 The second section is a single run and the third is equal weight'''
 
+from __future__ import division
 import pandas as pd
 import numpy as np
-from __future__ import division
 from matplotlib import pyplot as plt
 from numpy.linalg import inv,pinv
 from scipy.optimize import minimize
